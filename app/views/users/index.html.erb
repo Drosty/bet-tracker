@@ -8,13 +8,11 @@
   </thead>
 
   <tbody>
-    <% 10.times do %>
     <% @users.each do |user| %>
       <tr>
         <td><%= link_to display_name(user), user %></td>
         <td><%= display_total_value(user) %></td>
       </tr>
-    <% end %>
     <% end %>
   </tbody>
 </table>

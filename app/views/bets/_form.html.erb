@@ -12,25 +12,25 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.label :winner %><br>
+    <%= f.collection_select :winner, User.all, :id, :name %>
   </div>
+
+  <div class="field">
+    <%= f.label :loser %><br>
+    <%= f.collection_select :loser, User.all, :id, :name %>
+  </div>
+
   <div class="field">
     <%= f.label :value %><br>
     <%= f.number_field :value %>
   </div>
+
   <div class="field">
-    <%= f.label :init_user %><br>
-    <%= f.number_field :init_user %>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
   </div>
-  <div class="field">
-    <%= f.label :against_user %><br>
-    <%= f.number_field :against_user %>
-  </div>
-  <div class="field">
-    <%= f.label :winner %><br>
-    <%= f.number_field :winner %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -54,6 +54,7 @@
               <li><%= link_to "All Bets", bets_path, {:class => "btn"} %></li>
               <% if user_signed_in? %>
                 <li><%= link_to "Place New Bet", new_bet_path, {:class => "btn"} %></li>
+                <li><%= link_to "Edit Name", edit_user_path(current_user), {:class => "btn"} %></li>
                 <li><%= link_to "Logout", destroy_user_session_path, {:method => :delete, :class => "btn pull-right"} %></li>
               <% else %>
                 <li><%= link_to "Sign In", new_user_session_path, {:class => "btn pull-right"} %></li>

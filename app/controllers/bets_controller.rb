@@ -32,7 +32,7 @@ class BetsController < ApplicationController
       end
     end
   end
-  
+
   # DELETE /bets/1
   # DELETE /bets/1.json
   def destroy
@@ -51,6 +51,6 @@ class BetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bet_params
-      params.require(:bet).permit(:description, :value, :init_user, :against_user, :winner)
+      params.require(:bet).permit(:description, :value, :loser, :winner)
     end
 end
