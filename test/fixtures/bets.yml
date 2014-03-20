@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  value: 1
+  init_user: 1
+  against_user: 1
+  winner: 1
+
+two:
+  description: MyString
+  value: 1
+  init_user: 1
+  against_user: 1
+  winner: 1

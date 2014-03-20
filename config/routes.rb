@@ -1,4 +1,6 @@
 Bettracker::Application.routes.draw do
+  resources :bets
+
   devise_for :users
   resources :users, :except => [:new, :create]
 
