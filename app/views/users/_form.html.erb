@@ -15,11 +15,8 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :total_value %><br>
-    <%= f.number_field :total_value %>
-  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Submit', {class: 'btn'} %>
   </div>
 <% end %>
