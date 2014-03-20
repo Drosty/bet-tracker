@@ -1,30 +1,16 @@
 <h1>Listing bets</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Description</th>
-      <th>Value</th>
-      <th>Init user</th>
-      <th>Against user</th>
-      <th>Winner</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Bet Summary</th>
     </tr>
   </thead>
 
   <tbody>
     <% @bets.each do |bet| %>
       <tr>
-        <td><%= bet.description %></td>
-        <td><%= bet.value %></td>
-        <td><%= bet.init_user %></td>
-        <td><%= bet.against_user %></td>
-        <td><%= bet.winner %></td>
-        <td><%= link_to 'Show', bet %></td>
-        <td><%= link_to 'Edit', edit_bet_path(bet) %></td>
-        <td><%= link_to 'Destroy', bet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to bet.summary, bet %></td>
       </tr>
     <% end %>
   </tbody>

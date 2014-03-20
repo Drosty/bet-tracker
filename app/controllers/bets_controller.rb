@@ -17,10 +17,6 @@ class BetsController < ApplicationController
     @bet = Bet.new
   end
 
-  # GET /bets/1/edit
-  def edit
-  end
-
   # POST /bets
   # POST /bets.json
   def create
@@ -36,21 +32,7 @@ class BetsController < ApplicationController
       end
     end
   end
-
-  # PATCH/PUT /bets/1
-  # PATCH/PUT /bets/1.json
-  def update
-    respond_to do |format|
-      if @bet.update(bet_params)
-        format.html { redirect_to @bet, notice: 'Bet was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @bet.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
+  
   # DELETE /bets/1
   # DELETE /bets/1.json
   def destroy
