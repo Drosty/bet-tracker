@@ -8,6 +8,8 @@ class Bet < ActiveRecord::Base
 
   after_save :update_users
 
+  scope :earliest_first, order('bets.created_at DESC')
+
   def summary
     "#{self.winning_user.name} won $#{self.value} from #{self.losing_user.name} - #{self.description}"
   end

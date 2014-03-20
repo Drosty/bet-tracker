@@ -1,10 +1,11 @@
 class BetsController < ApplicationController
   before_action :set_bet, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, only: [:new, :create]
 
   # GET /bets
   # GET /bets.json
   def index
-    @bets = Bet.all
+    @bets = Bet.all.earliest_first
   end
 
   # GET /bets/1
