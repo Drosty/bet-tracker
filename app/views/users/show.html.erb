@@ -1,7 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-  <%= display_name @user %>
-  <%= display_total_value @user %>
+
+<table class="table">
+  <tbody>
+    <tr>
+      <td><%= display_name @user %></td>
+      <td><%= display_total_value @user %></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
 
 <table class="table">
   <thead>

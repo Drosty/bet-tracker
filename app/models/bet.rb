@@ -4,6 +4,8 @@ class Bet < ActiveRecord::Base
   validate :losing_user_valid
   validate :winner_cant_be_loser
 
+  validates :description, presence: true
+
   after_save :update_users
 
   def summary

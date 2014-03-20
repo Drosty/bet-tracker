@@ -1,28 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @bet.description %>
-</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Bet Information</th>
+    </tr>
+  </thead>
 
-<p>
-  <strong>Value:</strong>
-  <%= @bet.value %>
-</p>
+  <tbody>
+      <tr>
+        <td>Winner: <%= link_to @bet.winning_user.name, @bet.winning_user %></td>
+      </tr>
+      <tr>
+        <td>Loser: <%= link_to @bet.losing_user.name, @bet.losing_user %></td>
+      </tr>
+      <tr>
+        <td>Wager Amount: <%= @bet.value %></td>
+      </tr>
+      <tr>
+        <td>Description: <%= @bet.description %></td>
+      </tr>
 
-<p>
-  <strong>Init user:</strong>
-  <%= @bet.init_user %>
-</p>
 
-<p>
-  <strong>Against user:</strong>
-  <%= @bet.against_user %>
-</p>
-
-<p>
-  <strong>Winner:</strong>
-  <%= @bet.winner %>
-</p>
+  </tbody>
+</table>
 
 <%= link_to 'Back', bets_path %>

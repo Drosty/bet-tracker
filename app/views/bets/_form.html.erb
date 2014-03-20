@@ -22,7 +22,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :value %><br>
+    <%= f.label :value, "Wager Amount" %><br>
     <%= f.number_field :value %>
   </div>
 
@@ -32,6 +32,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit", {class: "btn"} %>
   </div>
 <% end %>
