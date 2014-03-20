@@ -11,3 +11,6 @@
  *= require_self
  *= require_tree .
  */
+
+.positive { color: green; }
+.negative { color: red; }
