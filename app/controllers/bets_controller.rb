@@ -5,7 +5,7 @@ class BetsController < ApplicationController
   # GET /bets
   # GET /bets.json
   def index
-    @bets = Bet.all.earliest_first
+    @bets = Bet.all
   end
 
   # GET /bets/1
