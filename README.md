@@ -1,4 +1,4 @@
-bet-tracker
+Bet Tracker
 ===========
 
-to track prop bets
+To track bets between friends and have a leaderboard, history, events etc.
